@@ -1,13 +1,13 @@
 openhab:
   container_name: openhab
-  image: "mikecrisis/openhab:1.8.3-armhf"
+  image: "mikecrisis/openhab:1.8.3-amd64"
   restart: always
   net: host
   cap_add:
     - NET_ADMIN
     - NET_RAW
   environment:
-    OPENHAB_HTTP_PORT: "8080"
+    OPENHAB_HTTP_PORT: "8081"
     OPENHAB_HTTPS_PORT: "8443"
   volumes:
     - "/etc/localtime:/etc/localtime:ro"

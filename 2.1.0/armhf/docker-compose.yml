@@ -6,6 +6,12 @@ openhab:
   cap_add:
     - NET_ADMIN
     - NET_RAW
+  environment:
+    USER_ID: "999"
+    LC_ALL: "en_US.UTF-8"
+    LANG: "en_US.UTF-8"
+    LANGUAGE: "en_US.UTF-8"
+    OPENHAB_HTTP_PORT: "8080"
   volumes:
     - "/etc/localtime:/etc/localtime:ro"
     - "/etc/timezone:/etc/timezone:ro"

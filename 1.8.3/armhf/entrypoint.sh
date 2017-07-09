@@ -5,7 +5,7 @@ IFS=$'\n\t'
 # Add openhab user & handle possible device groups for different host systems
 # Container base image puts dialout on group id 20, uucp on id 10
 # GPIO Group for RPI access
-NEW_USER_ID=${USER_ID:-9001}
+NEW_USER_ID=${USER_ID:-999}
 echo "Starting with openhab user id: $NEW_USER_ID"
 if ! id -u openhab >/dev/null 2>&1; then
   echo "Create user openhab with id ${NEW_USER_ID}"

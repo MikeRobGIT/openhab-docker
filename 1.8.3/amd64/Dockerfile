@@ -22,7 +22,7 @@ ENV \
     DEBIAN_FRONTEND=noninteractive \
     EXTRA_JAVA_OPTS="" \
     JAVA_HOME='/usr/lib/java-8' \
-    OPENHAB_HTTP_PORT="8080" \
+    OPENHAB_HTTP_PORT="8081" \
     OPENHAB_HTTPS_PORT="8443"
 
 # Basic build-time metadata as defined at http://label-schema.org
