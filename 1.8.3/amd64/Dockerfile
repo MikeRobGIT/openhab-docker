@@ -35,7 +35,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.url="http://www.openhab.com/" \
     org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/openhab/openhab-docker.git"
+    org.label-schema.vcs-url="https://github.com/MikeRobGIT/openhab-docker.git"
 
 # Install basepackages
 RUN apt-get update && \

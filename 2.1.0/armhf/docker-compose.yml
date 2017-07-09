@@ -1,6 +1,6 @@
 openhab:
   container_name: openhab
-  image: "openhab/openhab:2.1.0-armhf"
+  image: "mikecrisis/openhab:2.1.0-armhf"
   restart: always
   net: host
   cap_add:
