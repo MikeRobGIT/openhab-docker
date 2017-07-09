@@ -1,0 +1,20 @@
+openhab:
+  container_name: openhab
+  image: "openhab/openhab:1.8.3-armhf"
+  restart: always
+  net: host
+  cap_add:
+    - NET_ADMIN
+    - NET_RAW
+  volumes:
+    - "/etc/localtime:/etc/localtime:ro"
+    - "/etc/timezone:/etc/timezone:ro"
+    - "openhab_conf:/openhab/conf"
+    - "openhab_userdata:/openhab/userdata"
+    - "openhab_addons:/openhab/addons"
+  # The command node is very important. It overrides
+  # the "gosu openhab ./start.sh" command from Dockerfile and runs as root!
+  command: "./start.sh"
+  environment:
+    OPENHAB_HTTP_PORT: "8081"
+    OPENHAB_HTTPS_PORT: "8443"

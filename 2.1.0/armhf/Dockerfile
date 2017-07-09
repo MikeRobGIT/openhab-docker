@@ -95,4 +95,3 @@ COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["gosu", "openhab", "./start.sh"]
-
