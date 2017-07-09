@@ -6,6 +6,8 @@ openhab:
   cap_add:
     - NET_ADMIN
     - NET_RAW
+#  devices:
+#    - "/dev/ttyUSB0"
   environment:
     USER_ID: "999"
     LC_ALL: "en_US.UTF-8"
