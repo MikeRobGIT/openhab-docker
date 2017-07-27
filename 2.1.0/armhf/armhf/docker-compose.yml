@@ -1,21 +1,14 @@
-#sudo apt-get -y install python-pip sudo pip install docker-compose
-
 openhab:
   container_name: openhab
-  image: "mikecrisis/openhab:2.1.0-armhf"
+  image: "mikecrisis/openhab:1.8.3-armhf"
   restart: always
   net: host
   cap_add:
     - NET_ADMIN
     - NET_RAW
-#  devices:
-#    - "/dev/ttyUSB0"
   environment:
-    USER_ID: "999"
-    LC_ALL: "en_US.UTF-8"
-    LANG: "en_US.UTF-8"
-    LANGUAGE: "en_US.UTF-8"
     OPENHAB_HTTP_PORT: "8080"
+    OPENHAB_HTTPS_PORT: "8443"
   volumes:
     - "/etc/localtime:/etc/localtime:ro"
     - "/etc/timezone:/etc/timezone:ro"
